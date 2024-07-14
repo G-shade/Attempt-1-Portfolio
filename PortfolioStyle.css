@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: darkslategrey;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    background: linear-gradient(270deg,yellow,green,lime,greenyellow);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/*Line Work*/
+.line {
+    width: 100%;
+    height: 3px; 
+    background: linear-gradient(270deg,yellow,green,lime,greenyellow);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+}
+/*Line Effect*/
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbox {
+    background-color: #333;
+    height: 35px;  
+}
+
+nav ul {
+    list-style: disc;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 30px;
+    margin-top: 8px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 60px 20px;
+    margin-top: 60px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: -150px;
+}
+
+.aboutmepar {
+        color: white;
+        background-color: #333;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 900px;                     
+        margin: 0 auto;  
+        margin-top: -200px;                    
+        padding: 80px;                          
+        line-height: 1.1;                     
+        font-size: 16px; 
+        border-radius: 10px;
+        
+
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.projectheader {
+    text-align: center;
+    margin-top: -100px;
+}
+
+.project-item {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
+}
+
+h2 {
+    color: greenyellow;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btext {
+    text-align: center;
+}
+
+
+button {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: orange;
+    color: black;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+    background: linear-gradient(270deg,yellow,green,lime,greenyellow);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+}

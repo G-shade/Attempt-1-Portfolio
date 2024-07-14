@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 | Source Code</title>
+    <link rel="stylesheet" href="Project1Style.css">
+</head>
+<body>
+    <canvas id="rainCanvas"></canvas>
+
+        <header>
+            <div class="header">
+                <h3>Rock-Paper-Scissors Game Source Code</h3>
+            </div>
+        </header>
+        
+    <div class="container">
+    <div class="code"><pre>
+        <code style="color: white;">
+            <strong>    
+             <p style="display: inline;">#include &lt;stdio.h&gt;</p>
+             <p style="display: inline;">#include &lt;stdlib&gt;</p>
+             <p style="display: inline;">#include &lt;time.h&gt;</p>
+             <p style="display: inline;">#include &lt;ctype.h&gt;</p>
+            
+            int cpuf(int cpuinput);
+            
+            int main()
+            {
+                int x,cpuinput,cpu;
+                char playerinput;
+                printf("Welcome To Rock-Paper-Scissors \n");
+                loop:
+                printf("To Play Press R for Rock P for Paper Or S for Scissors\n");
+                scanf(" %c",&playerinput);
+                playerinput=toupper(playerinput);
+                printf("\n");
+            
+                switch(playerinput)
+                {   
+                    case 'R':
+                    printf("You Chose Rock\n");
+                    x=1;
+                    break;
+                    case 'P':
+                    printf("You Chose Paper\n");
+                    x=2;
+                    break;
+                    case 'S':
+                    printf("You Chose Scissors\n");
+                    x=3;
+                    break;
+                default:
+                printf("Please Enter A Valid Input\n");
+                goto loop;
+                }
+            
+                cpu=cpuf(cpuinput);
+            
+                if (x==1 && cpu==2)
+                {
+                    printf("Player: Rock CPU: Paper \nYou Lost");
+                }
+                else if (x==1 && cpu==3)
+                {
+                    printf("Player: Rock CPU: Scissors \nYou Won!");
+                }
+                else if (x==2 && cpu==1)
+                {
+                    printf("Player: Paper CPU: Rock \nYou Win!");
+                }
+                else if(x==2 && cpu==3)
+                {
+                    printf("Player: Paper CPU: Scissors \nYou Lost");
+                }
+                else if(x==3 && cpu==1)
+                {
+                    printf("Player: Scissors CPU: Rock \nYou Lost");
+                }
+                else if(x==3 && cpu==2)
+                {
+                    printf("Player: Scissors CPU: Paper \nYou Win!");
+                }
+                else if(x==cpu)
+                {
+                    if(x==1 && cpu==1)
+                    {
+                        printf("Draw\nPlayer: Rock CPU: Rock");
+                    }
+                    else if(x==2 && cpu==2)
+                    {
+                        printf("Draw\nPlayer: Paper CPU: Paper");
+                    }
+                    else if(x==3 && cpu==3)
+                    {
+                        printf("Draw\nPlayer: Scissors CPU: Scissors");
+                    }
+                }
+            
+            return 0;
+            }
+            
+            int cpuf(int cpuinput)
+            {
+                int y;
+                srand(time(0));
+                y=rand() % 3 + 1;
+            return y;
+            }
+            </strong>
+        </code>
+    </pre>
+    </div>
+
+    <!--Image Div-->
+    <div class="image">
+        <img src="https://c4.wallpaperflare.com/wallpaper/899/325/192/minimalism-rock-paper-scissors-wallpaper-preview.jpg">
+    </div>
+
+    <footer>
+        <p style="display: inline;"><b>NOTE:</b> This Program Was Writen In C And Can Be Executed In A Terminal</p>
+    </footer>
+
+    <script src="Portfolio.js"></script>
+</body>
+</html>

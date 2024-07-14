@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 | Source Code</title>
+    <link rel="stylesheet" href="Project1Style.css">
+</head>
+<body>
+    <canvas id="rainCanvas"></canvas>
+    <header>
+        <div class="header">
+            <h3>Hidden Number Game Source Code</h3>
+        </div>
+    </header>
+        
+    <div class="container">
+    <div class="code"><pre>
+        <code style="color: white;">
+            <strong>    
+             <p style="display: inline;">#include &lt;stdio.h&gt;</p>
+             <p style="display: inline;">#include &lt;stdlib&gt;</p>
+             <p style="display: inline;">#include &lt;time.h&gt;</p>
+             <p style="display: inline;">#include &lt;ctype.h&gt;</p>
+            
+             int CPUf();
+
+             void main()
+             {
+                 int player,cpu;
+             
+                 cpu=CPUf();
+                 
+                 printf("Enter A Number Between (1-100) And Try To Guess The Hidden Number");
+             do{
+                 printf("\n>>");
+                 scanf("%d",&player);
+             
+                     if(player==cpu)
+                         printf("YOU WON!\nHidden Number: %d\nYour Choice: %d\n",cpu,player);
+                     else if(player>cpu)
+                         printf("Go Lower");
+                     else    
+                         printf("Go Higher");
+             }while(player!=cpu);
+             
+             }
+             
+             int CPUf()
+             {
+                 srand(time(NULL));
+             
+                 int y=rand() % 100 + 1;
+             
+             return y;
+             }    
+            </strong>
+        </code>
+    </pre>
+    </div>
+
+    <!--Image Div-->
+    <div class="image">
+        <img src="https://cdn-icons-png.flaticon.com/512/6851/6851340.png">
+    </div>
+
+    <footer>
+        <p style="display: inline;"><b>NOTE:</b> This Program Was Writen In C And Can Be Executed In A Terminal</p>
+    </footer>
+
+    <script src="Portfolio.js"></script>
+</body>
+</html>

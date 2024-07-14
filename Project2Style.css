@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:   darkslategrey;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    color: black;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    background: linear-gradient(270deg,yellow,green,lime,greenyellow);
+    background-size: 800% 800%;
+    animation: gradientAnimation 30s ease infinite;
+
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin-top: 10px; 
+    width: fit-content;
+}
+
+.code {
+    display: inline-flex;
+    padding: 0 5px;
+    text-align: left;
+    background-color: #28b4e5;
+    margin-left: 20px; 
+    flex: 1;
+    margin-top: 70px;
+    margin-right: 150px;      
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 150px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: black;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+    background: linear-gradient(270deg,yellow,green,lime,greenyellow);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+
+}
+
+/*Effect*/
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
